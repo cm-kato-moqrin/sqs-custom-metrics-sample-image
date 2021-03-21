@@ -9,8 +9,8 @@ queueCounts=$(/usr/local/bin/aws sqs get-queue-attributes \
 --output text)
 
 /usr/local/bin/aws cloudwatch put-metric-data \
---metric-name FiveSecondsApproximateNumberOfMessages \
---namespace CustomSQS \
---dimensions QueueName=moqmoque \
+--metric-name <METRIC_NAME> \
+--namespace <NAME_SPACE> \
+--dimensions QueueName=<QUEUE_NAME> \
 --unit Count \
 --value $queueCounts
