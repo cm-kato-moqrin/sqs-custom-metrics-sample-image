@@ -1,0 +1,1 @@
+* * * * * for i in `seq 0 5 59`;do (sleep ${i}; /bin/sh /script.sh > /var/log/all.log 2>&1) & done;
